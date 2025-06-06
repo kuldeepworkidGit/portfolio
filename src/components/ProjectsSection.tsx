@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -14,6 +15,7 @@ const ProjectsSection = () => {
       description: "Comprehensive ride hailing application with cab booking, scheduling, and rhythm creation features. Integrated with AppsFlyer analytics, Stripe payments, and FreshChat support.",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&h=300&fit=crop",
       tech: ["React Native", "AppsFlyer", "Stripe", "DataDog", "Deep Linking"],
+      github: "#",
       playStore: "#",
       appStore: "#",
       demo: "#"
@@ -24,6 +26,7 @@ const ProjectsSection = () => {
       description: "News reporting application enabling reporters to capture and submit news directly from their phones with camera, video recording, and Google Maps integration.",
       image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
       tech: ["React Native", "Camera API", "Google Maps", "Video Upload", "Text Editor"],
+      github: "#",
       playStore: "#",
       demo: "#"
     },
@@ -33,6 +36,7 @@ const ProjectsSection = () => {
       description: "Million-download news application with dark mode, social login, dynamic UI, iOS widgets, cricket scoreboard, and config-based UI pattern.",
       image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
       tech: ["React Native", "iOS Widgets", "Social Login", "Dynamic UI", "WebView"],
+      github: "#",
       playStore: "#",
       appStore: "#"
     },
@@ -42,6 +46,7 @@ const ProjectsSection = () => {
       description: "Customized medical content platform for doctors and students with premium accounts, dynamic linking, and specialized medical articles.",
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop",
       tech: ["React Native", "Dynamic Linking", "Premium Features", "Medical Content"],
+      github: "#",
       playStore: "#",
       appStore: "#"
     },
@@ -51,6 +56,7 @@ const ProjectsSection = () => {
       description: "Multi-language news app with dark mode, profile upload, social login, offline support, push notifications, and dynamic UI rendering.",
       image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
       tech: ["React Native", "Multi-language", "Offline Support", "Push Notifications"],
+      github: "#",
       playStore: "#",
       appStore: "#"
     },
@@ -60,6 +66,7 @@ const ProjectsSection = () => {
       description: "News and entertainment app with live TV streaming, zodiac content, and all features of Daily Thanthi News application.",
       image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=500&h=300&fit=crop",
       tech: ["React Native", "Live Streaming", "Entertainment Content", "TV Features"],
+      github: "#",
       playStore: "#",
       appStore: "#"
     }
