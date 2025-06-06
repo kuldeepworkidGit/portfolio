@@ -65,7 +65,7 @@ const ContactSection = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Have a project in mind? Let's discuss how we can bring your mobile app ideas to life.
+              Ready to build your next mobile application? Let's discuss how we can bring your ideas to life with React Native.
             </p>
           </motion.div>
 
@@ -137,9 +137,9 @@ const ContactSection = () => {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
                 <p className="text-gray-400 leading-relaxed mb-6">
-                  I'm always interested in discussing new opportunities, innovative projects, 
-                  and collaborations. Whether you need a mobile app built from scratch or 
-                  want to improve an existing one, I'd love to hear from you.
+                  I'm currently based in Dubai and always interested in discussing new 
+                  React Native projects, innovative mobile solutions, and collaboration 
+                  opportunities. Whether you need a new app or want to optimize an existing one.
                 </p>
               </div>
 
@@ -150,7 +150,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
-                    <p className="text-white">alex.chen@example.com</p>
+                    <p className="text-white">kuldeepworkid@gmail.com</p>
                   </div>
                 </div>
 
@@ -160,7 +160,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Phone</p>
-                    <p className="text-white">+1 (555) 123-4567</p>
+                    <p className="text-white">+91-9354010866</p>
                   </div>
                 </div>
 
@@ -170,14 +170,14 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-white">Dubai, UAE</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="pt-8">
-                <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">Connect With Me</h4>
                 <div className="flex space-x-4">
                   <motion.a
                     href="#"
@@ -195,15 +195,6 @@ const ContactSection = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Linkedin size={20} />
-                  </motion.a>
-                  
-                  <motion.a
-                    href="#"
-                    className="w-12 h-12 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-sm font-bold">𝕏</span>
                   </motion.a>
                 </div>
               </div>

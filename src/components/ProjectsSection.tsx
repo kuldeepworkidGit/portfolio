@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -11,63 +10,58 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "EcoTracker",
-      description: "A sustainability app that helps users track their carbon footprint and environmental impact with gamification elements.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["React Native", "Firebase", "Redux", "Maps API"],
-      github: "#",
+      title: "ZED - Ride Hailing App",
+      description: "Comprehensive ride hailing application with cab booking, scheduling, and rhythm creation features. Integrated with AppsFlyer analytics, Stripe payments, and FreshChat support.",
+      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&h=300&fit=crop",
+      tech: ["React Native", "AppsFlyer", "Stripe", "DataDog", "Deep Linking"],
       playStore: "#",
-      demo: "#"
-    },
-    {
-      id: 2,
-      title: "FitnessPro",
-      description: "A comprehensive fitness tracking app with workout plans, nutrition tracking, and social features for fitness enthusiasts.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
-      tech: ["Flutter", "Dart", "SQLite", "REST API"],
-      github: "#",
       appStore: "#",
       demo: "#"
     },
     {
+      id: 2,
+      title: "Reporter App",
+      description: "News reporting application enabling reporters to capture and submit news directly from their phones with camera, video recording, and Google Maps integration.",
+      image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
+      tech: ["React Native", "Camera API", "Google Maps", "Video Upload", "Text Editor"],
+      playStore: "#",
+      demo: "#"
+    },
+    {
       id: 3,
-      title: "ChatFlow",
-      description: "Real-time messaging app with end-to-end encryption, multimedia sharing, and advanced chat features.",
-      image: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=500&h=300&fit=crop",
-      tech: ["React Native", "Socket.io", "Node.js", "MongoDB"],
-      github: "#",
+      title: "Daily Thanthi News",
+      description: "Million-download news application with dark mode, social login, dynamic UI, iOS widgets, cricket scoreboard, and config-based UI pattern.",
+      image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
+      tech: ["React Native", "iOS Widgets", "Social Login", "Dynamic UI", "WebView"],
       playStore: "#",
       appStore: "#"
     },
     {
       id: 4,
-      title: "SmartWallet",
-      description: "Personal finance management app with expense tracking, budgeting tools, and investment portfolio management.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop",
-      tech: ["Flutter", "Firebase", "Plaid API", "Charts"],
-      github: "#",
+      title: "Medical Dialogues",
+      description: "Customized medical content platform for doctors and students with premium accounts, dynamic linking, and specialized medical articles.",
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop",
+      tech: ["React Native", "Dynamic Linking", "Premium Features", "Medical Content"],
       playStore: "#",
-      demo: "#"
+      appStore: "#"
     },
     {
       id: 5,
-      title: "TaskMaster",
-      description: "Project management and productivity app with team collaboration, time tracking, and advanced reporting features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["React Native", "GraphQL", "AWS", "Push Notifications"],
-      github: "#",
-      appStore: "#",
-      demo: "#"
+      title: "Madhyamam Online",
+      description: "Multi-language news app with dark mode, profile upload, social login, offline support, push notifications, and dynamic UI rendering.",
+      image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
+      tech: ["React Native", "Multi-language", "Offline Support", "Push Notifications"],
+      playStore: "#",
+      appStore: "#"
     },
     {
       id: 6,
-      title: "MoodTracker",
-      description: "Mental health and mood tracking app with meditation guides, journaling, and wellness insights.",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop",
-      tech: ["Flutter", "SQLite", "Local Notifications", "Charts"],
-      github: "#",
+      title: "Thanthi TV",
+      description: "News and entertainment app with live TV streaming, zodiac content, and all features of Daily Thanthi News application.",
+      image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=500&h=300&fit=crop",
+      tech: ["React Native", "Live Streaming", "Entertainment Content", "TV Features"],
       playStore: "#",
-      demo: "#"
+      appStore: "#"
     }
   ];
 
@@ -106,7 +100,7 @@ const ProjectsSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Here are some of my recent mobile applications that showcase my skills and creativity
+            Showcasing mobile applications that demonstrate my expertise in React Native development
           </p>
         </motion.div>
 

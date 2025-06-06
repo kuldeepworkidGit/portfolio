@@ -48,15 +48,17 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate mobile app developer with over 5 years of experience 
-                creating innovative and user-friendly applications for iOS and Android platforms. 
-                My expertise spans across React Native, Flutter, and native development.
+                I'm a skilled React Native developer with over 5 years of experience 
+                creating cross-platform mobile applications with optimal performance 
+                and exceptional user experience. Currently working at Future Infotech 
+                in Dubai, I specialize in JavaScript and modern mobile development.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                I specialize in building scalable, performant mobile applications that 
-                deliver exceptional user experiences. From concept to deployment, I handle 
-                the entire development lifecycle with attention to detail and best practices.
+                My expertise includes building scalable applications, optimizing performance, 
+                and deploying to both Play Store and App Store. I've successfully reduced 
+                type errors by 95%, improved location accuracy, and achieved 20% app size 
+                reduction while cutting Google Places API calls by 80%.
               </p>
 
               <motion.div
@@ -69,11 +71,11 @@ const AboutSection = () => {
                 </div>
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Projects</h4>
-                  <p className="text-gray-300">50+ Completed</p>
+                  <p className="text-gray-300">10+ Apps Built</p>
                 </div>
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Platforms</h4>
-                  <p className="text-gray-300">iOS & Android</p>
+                  <p className="text-gray-300">Android & iOS</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -84,13 +86,14 @@ const AboutSection = () => {
             >
               <div className="relative z-10 bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-2xl p-8">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="Alex Chen"
+                  src="/lovable-uploads/6ccf50b9-ce85-42e4-a900-bbcc57e42d94.png"
+                  alt="Kuldeep Singh"
                   className="w-full h-64 object-cover rounded-xl mb-6"
                 />
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">Alex Chen</h3>
-                  <p className="text-purple-400">Senior Mobile Developer</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Kuldeep Singh</h3>
+                  <p className="text-purple-400">React Native Developer</p>
+                  <p className="text-gray-400 text-sm mt-2">Dubai, UAE</p>
                 </div>
               </div>
               <motion.div

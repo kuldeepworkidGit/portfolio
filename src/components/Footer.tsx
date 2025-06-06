@@ -18,10 +18,10 @@ const Footer = () => {
               className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2"
               whileHover={{ scale: 1.05 }}
             >
-              Alex Chen
+              Kuldeep Singh
             </motion.div>
             <p className="text-gray-400 text-sm">
-              © {currentYear} All rights reserved. Built with React & Tailwind CSS.
+              © {currentYear} All rights reserved. Built with React Native expertise.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
               Back to Top
             </motion.a>
             <motion.a
-              href="mailto:alex.chen@example.com"
+              href="mailto:kuldeepworkid@gmail.com"
               className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
               whileHover={{ scale: 1.05 }}
             >
@@ -54,7 +54,7 @@ const Footer = () => {
           className="mt-8 pt-8 border-t border-gray-700 text-center"
         >
           <p className="text-gray-500 text-xs">
-            Designed & developed with 💜 by Alex Chen
+            Crafted with 💜 by Kuldeep Singh - React Native Developer
           </p>
         </motion.div>
       </div>

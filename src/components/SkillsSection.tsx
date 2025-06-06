@@ -9,30 +9,30 @@ const SkillsSection = () => {
 
   const skillCategories = [
     {
-      title: "Mobile Frameworks",
+      title: "Core Technologies",
       skills: [
         { name: "React Native", level: 95, color: "from-blue-400 to-blue-600" },
-        { name: "Flutter", level: 90, color: "from-cyan-400 to-cyan-600" },
-        { name: "Swift (iOS)", level: 85, color: "from-orange-400 to-orange-600" },
-        { name: "Kotlin", level: 80, color: "from-purple-400 to-purple-600" }
+        { name: "JavaScript ES6", level: 90, color: "from-yellow-400 to-yellow-600" },
+        { name: "TypeScript", level: 85, color: "from-blue-500 to-blue-700" },
+        { name: "Redux Toolkit", level: 90, color: "from-purple-400 to-purple-600" }
       ]
     },
     {
-      title: "Backend & Database",
+      title: "Mobile Development",
       skills: [
-        { name: "Firebase", level: 90, color: "from-yellow-400 to-yellow-600" },
-        { name: "Node.js", level: 85, color: "from-green-400 to-green-600" },
-        { name: "MongoDB", level: 80, color: "from-green-500 to-green-700" },
-        { name: "REST APIs", level: 95, color: "from-indigo-400 to-indigo-600" }
+        { name: "React Navigation", level: 95, color: "from-green-400 to-green-600" },
+        { name: "Native Modules", level: 80, color: "from-orange-400 to-orange-600" },
+        { name: "Deep Linking", level: 85, color: "from-red-400 to-red-600" },
+        { name: "Push Notifications", level: 90, color: "from-indigo-400 to-indigo-600" }
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Backend & Tools",
       skills: [
-        { name: "Git", level: 95, color: "from-red-400 to-red-600" },
-        { name: "Docker", level: 75, color: "from-blue-500 to-blue-700" },
-        { name: "AWS", level: 80, color: "from-orange-500 to-orange-700" },
-        { name: "GraphQL", level: 85, color: "from-pink-400 to-pink-600" }
+        { name: "Firebase", level: 90, color: "from-yellow-500 to-orange-500" },
+        { name: "Git & GitHub", level: 95, color: "from-gray-400 to-gray-600" },
+        { name: "Xcode", level: 85, color: "from-blue-500 to-blue-700" },
+        { name: "Android Studio", level: 90, color: "from-green-500 to-green-700" }
       ]
     }
   ];
@@ -72,7 +72,7 @@ const SkillsSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
+            Technologies and tools I use to build exceptional mobile applications
           </p>
         </motion.div>
 
@@ -133,8 +133,9 @@ const SkillsSection = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              "React Native", "Flutter", "Swift", "Kotlin", "Firebase", "AWS",
-              "MongoDB", "GraphQL", "Redux", "TypeScript", "Git", "Docker"
+              "React Native", "JavaScript", "TypeScript", "Redux Toolkit", "Firebase",
+              "React Navigation", "Native Modules", "Google Analytics", "Push Notifications",
+              "Deep Linking", "Xcode", "Android Studio", "Git", "Figma", "Jira"
             ].map((tech, index) => (
               <motion.div
                 key={index}

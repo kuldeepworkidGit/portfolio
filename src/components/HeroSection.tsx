@@ -5,7 +5,7 @@ import ParticleBackground from './ParticleBackground';
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Building innovative mobile experiences";
+  const fullText = "Creating cross-platform mobile experiences with React Native";
   
   useEffect(() => {
     let i = 0;
@@ -45,7 +45,7 @@ const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Alex Chen
+              Kuldeep Singh
             </span>
           </motion.h1>
           
@@ -55,7 +55,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Mobile App Developer
+            React Native Developer
           </motion.h2>
           
           <motion.p
