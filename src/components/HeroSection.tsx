@@ -1,12 +1,12 @@
-
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import ParticleBackground from './ParticleBackground';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import ParticleBackground from "./ParticleBackground";
 
 const HeroSection = () => {
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Creating cross-platform mobile experiences with React Native";
-  
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText =
+    "Creating cross-platform mobile experiences with React Native";
+
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -17,21 +17,24 @@ const HeroSection = () => {
         clearInterval(timer);
       }
     }, 100);
-    
+
     return () => clearInterval(timer);
   }, []);
 
   const scrollToProjects = () => {
-    const element = document.getElementById('projects');
+    const element = document.getElementById("projects");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <ParticleBackground />
-      
+
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -48,7 +51,7 @@ const HeroSection = () => {
               Kuldeep Singh
             </span>
           </motion.h1>
-          
+
           <motion.h2
             className="text-2xl md:text-3xl font-semibold mb-4 text-gray-300"
             initial={{ opacity: 0 }}
@@ -57,7 +60,7 @@ const HeroSection = () => {
           >
             React Native Developer
           </motion.h2>
-          
+
           <motion.p
             className="text-xl md:text-2xl mb-8 text-purple-300 min-h-[2rem]"
             initial={{ opacity: 0 }}
@@ -67,7 +70,7 @@ const HeroSection = () => {
             {displayedText}
             <span className="animate-pulse">|</span>
           </motion.p>
-          
+
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
@@ -86,18 +89,24 @@ const HeroSection = () => {
                 layoutId="buttonGlow"
               />
             </motion.button>
-            
+
             <motion.button
               className="px-8 py-4 border-2 border-purple-500 rounded-full font-semibold text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/document/d/15cvymp-xdPccV790XfvUPJ-cNPpK6jhmrNKdDtkVmbE/edit?usp=sharing",
+                  "_blank"
+                );
+              }}
             >
               Download Resume
             </motion.button>
           </motion.div>
         </motion.div>
       </div>
-      
+
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}

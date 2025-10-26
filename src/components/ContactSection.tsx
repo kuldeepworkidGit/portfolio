@@ -3,9 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Github, Linkedin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 const ContactSection = () => {
   const ref = useRef(null);
+  const formRef = useRef();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
   const [formData, setFormData] = useState({
@@ -26,6 +29,17 @@ const ContactSection = () => {
     // Handle form submission here
     console.log('Form submitted:', formData);
     // Reset form
+    emailjs.sendForm(
+      'service_3y6dsf4',             // your EmailJS service ID
+      'template_2xxvs6w',            // your EmailJS template ID
+      formRef.current,               // form reference
+      { publicKey: 'Y0nDjFq9wM9jjck8l' } // public key from EmailJS
+    )
+    .then(() => {
+      alert('Message sent!');
+    }, (error) => {
+      alert('Failed to send: ' + error.text);
+    });
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -72,7 +86,7 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
                     Full Name
@@ -170,7 +184,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Dubai, UAE</p>
+                    <p className="text-white">Noida, India</p>
                   </div>
                 </div>
               </div>
@@ -185,7 +199,7 @@ const ContactSection = () => {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Github size={20} />
+                    <Github size={20} onClick={() => window.open("https://github.com/kuldeepworkid", "_blank")} />
                   </motion.a>
                   
                   <motion.a
@@ -194,7 +208,7 @@ const ContactSection = () => {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={20} onClick={() => window.open("https://www.linkedin.com/in/kuldeep-singh-71346616b", "_blank")} />
                   </motion.a>
                 </div>
               </div>

@@ -48,10 +48,10 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a skilled React Native developer with over 5 years of experience 
+                I'm a skilled React Native developer with over 6 years of experience 
                 creating cross-platform mobile applications with optimal performance 
-                and exceptional user experience. Currently working at Future Infotech 
-                in Dubai, I specialize in JavaScript and modern mobile development.
+                and exceptional user experience. Currently working at HCLTECH 
+                in Noida, I specialize in JavaScript, Typescript and modern mobile development.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
@@ -67,7 +67,7 @@ const AboutSection = () => {
               >
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Experience</h4>
-                  <p className="text-gray-300">5+ Years</p>
+                  <p className="text-gray-300">6+ Years</p>
                 </div>
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Projects</h4>
@@ -93,7 +93,7 @@ const AboutSection = () => {
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-white mb-2">Kuldeep Singh</h3>
                   <p className="text-purple-400">React Native Developer</p>
-                  <p className="text-gray-400 text-sm mt-2">Dubai, UAE</p>
+                  <p className="text-gray-400 text-sm mt-2">Noida, India</p>
                 </div>
               </div>
               <motion.div
