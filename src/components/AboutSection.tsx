@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -48,17 +47,11 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a skilled React Native developer with over 6 years of experience 
-                creating cross-platform mobile applications with optimal performance 
-                and exceptional user experience. Currently working at HCLTECH 
-                in Noida, I specialize in JavaScript, Typescript and modern mobile development.
+                I'm a React Native mobile engineer with 6+ years of experience building high‑performance Android and iOS applications. My work focuses on native‑like performance, smooth animations, scalable architecture, and excellent user experience.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                My expertise includes building scalable applications, optimizing performance, 
-                and deploying to both Play Store and App Store. I've successfully reduced 
-                type errors by 95%, improved location accuracy, and achieved 20% app size 
-                reduction while cutting Google Places API calls by 80%.
+                My expertise includes offline‑first apps, push notifications, deep linking, GPS & maps, Firebase integrations, native modules, CI/CD builds, and publishing apps to Play Store & App Store. I’ve optimized app startup time, reduced bundle size, and improved overall mobile performance in production.
               </p>
 
               <motion.div
@@ -71,7 +64,7 @@ const AboutSection = () => {
                 </div>
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Projects</h4>
-                  <p className="text-gray-300">10+ Apps Built</p>
+                  <p className="text-gray-300">10+ Mobile Apps</p>
                 </div>
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">Platforms</h4>

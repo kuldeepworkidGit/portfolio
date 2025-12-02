@@ -3,14 +3,17 @@ import {
   SiReact,
   SiJavascript,
   SiTypescript,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
   SiFirebase,
   SiRedux,
-  SiTailwindcss,
   SiGit,
-  SiGithub
+  SiGithub,
+  SiXcode,
+  SiAndroidstudio,
+  SiAndroid,
+  SiGoogleanalytics,
+  SiFigma,
+  SiExpo,
+  SiIos
 } from 'react-icons/si';
 
 const HeroSection = () => {
@@ -30,17 +33,27 @@ const HeroSection = () => {
 
   const techStack = [
     { icon: SiReact, name: "React Native", color: "#61DAFB" },
-    { icon: SiReact, name: "React", color: "#61DAFB" },
+    { icon: SiExpo, name: "Expo", color: "#FFFFFF" },
     { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
     { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
-    { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
-    { icon: SiExpress, name: "Express.js", color: "#FFFFFF" },
-    { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+    { icon: SiAndroid, name: "Android", color: "#3DDC84" },
+    { icon: SiIos, name: "iOS", color: "#FFFFFF" },
+    { icon: SiXcode, name: "Xcode", color: "#147EFB" },
+    { icon: SiAndroidstudio, name: "Android Studio", color: "#47A248" },
     { icon: SiFirebase, name: "Firebase", color: "#FFCA28" },
     { icon: SiRedux, name: "Redux Toolkit", color: "#764ABC" },
-    { icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },
-    { icon: SiGit, name: "Git", color: "#F05032" },
-    { icon: SiGithub, name: "GitHub", color: "#FFFFFF" },
+    { icon: SiFigma, name: "Figma UI/UX", color: "#F24E1E" }
+  ];
+
+  const orbitIcons = [
+    { index: 0, position: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
+    { index: 1, position: "top-8 right-4 translate-x-1/2 -translate-y-1/2" },
+    { index: 2, position: "top-1/2 right-0 translate-x-1/2 -translate-y-1/2" },
+    { index: 3, position: "bottom-8 right-4 translate-x-1/2 translate-y-1/2" },
+    { index: 4, position: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
+    { index: 5, position: "bottom-8 left-4 -translate-x-1/2 translate-y-1/2" },
+    { index: 6, position: "top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" },
+    { index: 7, position: "top-8 left-4 -translate-x-1/2 -translate-y-1/2" },
   ];
 
   return (
@@ -85,7 +98,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300"
             >
-              React Native & MERN Stack Developer
+              React Native Engineer &bull; Mobile App Specialist
             </motion.h2>
 
             <motion.p
@@ -94,8 +107,16 @@ const HeroSection = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-gray-400 text-lg leading-relaxed max-w-xl"
             >
-              I build high-performance mobile apps with React Native and scalable web backends using the MERN stack.
-              I love working on clean UI, smooth UX, and production-quality code.
+              I build production-quality Android & iOS apps using React Native & Expo. I specialize in pixel‑perfect UI, smooth animations, offline-first architecture, push notifications, deep linking, and performance‑optimized mobile experiences.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.55, duration: 0.6 }}
+              className="text-blue-400 font-medium text-base"
+            >
+              • Push Notifications • Deep Linking • Offline‑First • Reanimated Animations • GPS & Maps • App Store / Play Store Deployment
             </motion.p>
 
             <motion.div
@@ -144,7 +165,7 @@ const HeroSection = () => {
               className="pt-8"
             >
               <p className="text-gray-400 text-sm font-medium mb-4 uppercase tracking-wider">
-                Tech I work with
+                Core Mobile Technologies
               </p>
               <div className="flex flex-wrap gap-4">
                 {techStack.map((tech, index) => (
@@ -175,22 +196,24 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="flex justify-center lg:justify-end"
+            className="flex items-center justify-center lg:justify-end"
           >
-            <div className="relative">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+              {/* Glowing background */}
               <motion.div
                 animate={{
-                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.05, 1],
                 }}
                 transition={{
                   duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-2xl opacity-30"
+                className="absolute -inset-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-3xl opacity-30"
               ></motion.div>
 
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-700 shadow-2xl">
+              {/* Center profile image */}
+              <div className="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-2xl">
                 <img
                   src="/lovable-uploads/6ccf50b9-ce85-42e4-a900-bbcc57e42d94.png"
                   alt="Kuldeep Singh"
@@ -198,7 +221,29 @@ const HeroSection = () => {
                 />
               </div>
 
+              {/* Rotating tech orbit */}
               <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border border-blue-500/30"
+              >
+                {orbitIcons.map(({ index, position }) => {
+                  const tech = techStack[index];
+                  const Icon = tech.icon as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+                  return (
+                    <div
+                      key={tech.name}
+                      className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-gray-900/80 border border-gray-700 rounded-full flex items-center justify-center shadow-lg`}
+                    >
+                      <Icon className="w-5 h-5 md:w-6 md:h-6" style={{ color: tech.color }} />
+                    </div>
+                  );
+                })}
+              </motion.div>
+
+              {/* Experience badge */}
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
                 }}
@@ -207,13 +252,13 @@ const HeroSection = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-4 shadow-lg"
+                className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-4 shadow-lg z-20"
               >
                 <div className="text-white text-center">
                   <p className="text-2xl font-bold">6+</p>
                   <p className="text-xs">Years Exp</p>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
