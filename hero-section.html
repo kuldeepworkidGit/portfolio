@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuldeep Singh - React Native Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #4c1d95 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+        }
+
+        .gradient-btn:hover {
+            background: linear-gradient(90deg, #1d4ed8 0%, #6d28d9 100%);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .orbit-ring {
+            animation: rotate 20s linear infinite;
+        }
+
+        .orbit-icon {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(30, 27, 75, 0.8);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #a78bfa;
+            transition: all 0.3s ease;
+        }
+
+        .orbit-icon:hover {
+            transform: scale(1.2);
+            border-color: #a78bfa;
+            background: rgba(167, 139, 250, 0.2);
+        }
+
+        .orbit-icon:nth-child(1) {
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-icon:nth-child(2) {
+            top: 14.6%;
+            right: 14.6%;
+            transform: translate(50%, -50%);
+        }
+
+        .orbit-icon:nth-child(3) {
+            top: 50%;
+            right: 0%;
+            transform: translate(50%, -50%);
+        }
+
+        .orbit-icon:nth-child(4) {
+            bottom: 14.6%;
+            right: 14.6%;
+            transform: translate(50%, 50%);
+        }
+
+        .orbit-icon:nth-child(5) {
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+
+        .orbit-icon:nth-child(6) {
+            bottom: 14.6%;
+            left: 14.6%;
+            transform: translate(-50%, 50%);
+        }
+
+        .orbit-icon:nth-child(7) {
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-icon:nth-child(8) {
+            top: 14.6%;
+            left: 14.6%;
+            transform: translate(-50%, -50%);
+        }
+
+        .profile-container {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+        }
+
+        .orbit-container {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .profile-image {
+            position: relative;
+            z-index: 10;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid rgba(139, 92, 246, 0.3);
+            object-fit: cover;
+        }
+
+        .exp-badge {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            z-index: 20;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            padding: 12px 16px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                width: 220px;
+                height: 220px;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .orbit-container {
+                width: 320px;
+                height: 320px;
+            }
+
+            .orbit-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-6">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold gradient-text">
+                Kuldeep Singh
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm">
+                <a href="#home" class="text-white pb-1 border-b-2 border-purple-400 font-medium">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-12 md:py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+
+            <!-- Left Column - Text Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <p class="text-blue-400 text-lg font-medium">Hi, I'm</p>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold gradient-text">
+                    Kuldeep Singh
+                </h1>
+
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-300">
+                    React Native & MERN Stack Developer
+                </h2>
+
+                <p class="text-gray-400 text-lg leading-relaxed max-w-xl">
+                    I build high-performance mobile apps with React Native and scalable web backends using the MERN stack. I love working on clean UI, smooth UX, and production-quality code.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                    <button class="gradient-btn px-8 py-3 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        View Projects
+                    </button>
+                    <button class="px-8 py-3 border-2 border-blue-500 rounded-lg font-semibold text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-105">
+                        Download Resume
+                    </button>
+                    <button class="px-8 py-3 border-2 border-gray-600 rounded-lg font-semibold text-gray-300 hover:bg-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-105">
+                        Contact Me
+                    </button>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="pt-8">
+                    <p class="text-gray-400 text-sm font-medium mb-4 uppercase tracking-wider">
+                        Tech I Work With
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">React</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">JavaScript</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">TypeScript</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Node.js</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Express</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">MongoDB</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Firebase</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Redux</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Git</span>
+                        <span class="px-4 py-2 bg-gray-800/50 border border-purple-500/30 rounded-lg text-sm text-purple-300 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Profile with Rotating Orbit -->
+            <div class="flex justify-center items-center">
+                <div class="profile-container">
+
+                    <!-- Profile Image -->
+                    <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                        alt="Kuldeep Singh"
+                        class="profile-image shadow-2xl"
+                    />
+
+                    <!-- Experience Badge -->
+                    <div class="exp-badge">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-white">6+</p>
+                            <p class="text-xs text-gray-200">Years</p>
+                        </div>
+                    </div>
+
+                    <!-- Rotating Orbit with Icons -->
+                    <div class="orbit-container orbit-ring">
+                        <div class="orbit-icon" title="React Native">⚛️</div>
+                        <div class="orbit-icon" title="JavaScript">JS</div>
+                        <div class="orbit-icon" title="TypeScript">TS</div>
+                        <div class="orbit-icon" title="Node.js">🟢</div>
+                        <div class="orbit-icon" title="MongoDB">🍃</div>
+                        <div class="orbit-icon" title="Firebase">🔥</div>
+                        <div class="orbit-icon" title="Redux">🔄</div>
+                        <div class="orbit-icon" title="Git">📦</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="flex justify-center pb-8">
+        <div class="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center p-2">
+            <div class="w-1 h-3 bg-blue-400 rounded-full animate-bounce"></div>
+        </div>
+    </div>
+
+</body>
+</html>
