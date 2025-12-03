@@ -16,6 +16,7 @@ import {
   SiIos
 } from 'react-icons/si';
 
+
 const HeroSection = () => {
   const scrollToProjects = () => {
     const element = document.getElementById("projects");

@@ -47,12 +47,31 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a React Native mobile engineer with 6+ years of experience building high‑performance Android and iOS applications. My work focuses on native‑like performance, smooth animations, scalable architecture, and excellent user experience.
+                I&apos;m a React Native mobile engineer with 6+ years of experience building high‑performance Android and iOS applications. I focus on native‑like performance, smooth animations, scalable architecture, and a clean, modern user experience.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                My expertise includes offline‑first apps, push notifications, deep linking, GPS & maps, Firebase integrations, native modules, CI/CD builds, and publishing apps to Play Store & App Store. I’ve optimized app startup time, reduced bundle size, and improved overall mobile performance in production.
+                My expertise includes offline‑first apps, push notifications, deep linking, GPS & maps, Firebase integrations, native modules, CI/CD pipelines, and shipping apps to the Play Store & App Store. I&apos;ve improved startup time, reduced bundle size, and delivered smoother, more reliable mobile experiences in production.
               </p>
+
+              <div className="grid sm:grid-cols-2 gap-3 pt-2">
+                <div className="text-sm text-gray-300">
+                  <p className="font-semibold text-purple-300 mb-1">What I focus on</p>
+                  <ul className="space-y-1 list-disc list-inside text-gray-400">
+                    <li>Pixel‑perfect mobile UI</li>
+                    <li>Reanimated & smooth interactions</li>
+                    <li>Offline‑first & performance</li>
+                  </ul>
+                </div>
+                <div className="text-sm text-gray-300">
+                  <p className="font-semibold text-purple-300 mb-1">Tooling & workflow</p>
+                  <ul className="space-y-1 list-disc list-inside text-gray-400">
+                    <li>React Navigation & deep linking</li>
+                    <li>Firebase, FCM & analytics</li>
+                    <li>App Store / Play Store releases</li>
+                  </ul>
+                </div>
+              </div>
 
               <motion.div
                 className="flex flex-wrap gap-4 mt-8"
@@ -85,7 +104,7 @@ const AboutSection = () => {
                 />
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-white mb-2">Kuldeep Singh</h3>
-                  <p className="text-purple-400">React Native Developer</p>
+                  <p className="text-purple-400">React Native Mobile Engineer</p>
                   <p className="text-gray-400 text-sm mt-2">Noida, India</p>
                 </div>
               </div>
