@@ -37,8 +37,8 @@ const Index = () => {
       <Navbar activeSection={activeSection} />
       <main>
         <HeroSection />
-        <AboutSection />
         <ProjectsSection />
+        <AboutSection />
         <SkillsSection />
         <ContactSection />
       </main>
