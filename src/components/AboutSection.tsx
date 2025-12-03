@@ -94,13 +94,13 @@ const AboutSection = () => {
 
             <motion.div
               variants={itemVariants}
-              className="relative"
+              className="relative -mt-10"
             >
-              <div className="relative z-10 bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-2xl p-8">
+              <div className="relative z-10 bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-2xl p-8 flex flex-col items-center">
                 <img
-                  src="/lovable-uploads/6ccf50b9-ce85-42e4-a900-bbcc57e42d94.png"
+                  src="/lovable-uploads/profile.jpg"
                   alt="Kuldeep Singh"
-                  className="w-full h-64 object-cover rounded-xl mb-6"
+                  className="w-full h-auto object-contain rounded-xl mb-6"
                 />
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-white mb-2">Kuldeep Singh</h3>

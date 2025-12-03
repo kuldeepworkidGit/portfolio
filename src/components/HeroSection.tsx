@@ -216,7 +216,7 @@ const HeroSection = () => {
               {/* Center profile image */}
               <div className="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-2xl">
                 <img
-                  src="/lovable-uploads/6ccf50b9-ce85-42e4-a900-bbcc57e42d94.png"
+                  src="/lovable-uploads/profile.jpg"
                   alt="Kuldeep Singh"
                   className="w-full h-full object-cover"
                 />
