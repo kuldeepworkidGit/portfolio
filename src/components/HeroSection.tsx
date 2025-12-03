@@ -48,12 +48,23 @@ const HeroSection = () => {
 
   const orbitIcons = [
     { index: 0, position: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
-    { index: 1, position: "top-8 right-4 translate-x-1/2 -translate-y-1/2" },
+    // { index: 1, position: "top-8 right-4 translate-x-1/2 -translate-y-1/2" },
     { index: 2, position: "top-1/2 right-0 translate-x-1/2 -translate-y-1/2" },
-    { index: 3, position: "bottom-8 right-4 translate-x-1/2 translate-y-1/2" },
+    // { index: 3, position: "bottom-8 right-4 translate-x-1/2 translate-y-1/2" },
     { index: 4, position: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
-    { index: 5, position: "bottom-8 left-4 -translate-x-1/2 translate-y-1/2" },
+    // { index: 5, position: "bottom-8 left-4 -translate-x-1/2 translate-y-1/2" },
     { index: 6, position: "top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" },
+    // { index: 7, position: "top-8 left-4 -translate-x-1/2 -translate-y-1/2" },
+  ];
+
+    const orbitIcons1 = [
+    // { index: 0, position: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
+    { index: 1, position: "top-8 right-4 translate-x-1/2 -translate-y-1/2" },
+    // { index: 2, position: "top-1/2 right-0 translate-x-1/2 -translate-y-1/2" },
+    { index: 3, position: "bottom-8 right-4 translate-x-1/2 translate-y-1/2" },
+    // { index: 4, position: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" },
+    { index: 5, position: "bottom-8 left-4 -translate-x-1/2 translate-y-1/2" },
+    // { index: 6, position: "top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" },
     { index: 7, position: "top-8 left-4 -translate-x-1/2 -translate-y-1/2" },
   ];
 
@@ -222,10 +233,32 @@ const HeroSection = () => {
                 />
               </div>
 
-              {/* Rotating tech orbit */}
+              {/* Second outer circle (anti‑clockwise rotation) */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 scale-125 rounded-full border border-blue-500/20"
+              >
+                              <div className="absolute inset-0 scale-125 rounded-full border border-blue-500/20"></div>
+                              {orbitIcons1.map(({ index, position }) => {
+                  const tech = techStack[index];
+                  const Icon = tech.icon as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+                  return (
+                    <div
+                      key={tech.name}
+                      className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-gray-900/80 border border-gray-700 rounded-full flex items-center justify-center shadow-lg`}
+                    >
+                      <Icon className="w-5 h-5 md:w-6 md:h-6" style={{ color: tech.color }} />
+                    </div>
+                  );
+                })}
+              </motion.div>
+
+              {/* Rotating tech orbit (outer circle clockwise, icons anti-clockwise) */}
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 rounded-full border border-blue-500/30"
               >
                 {orbitIcons.map(({ index, position }) => {
