@@ -3,160 +3,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink, Smartphone } from "lucide-react";
 import { FaAndroid, FaApple } from "react-icons/fa";
-import ZedRideCard from "./ProjectCard";
-import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  // const projectsData = [
-  //   {
-  //     title: "Zed Ride – Dubai Taxi App",
-  //     description:
-  //       "A Dubai-first ride-hailing app built with React Native. Features realtime driver tracking, scheduled rides, secure payments and a clean App-Store-style UI.",
-  //     images: [
-  //       "/projects/z1.webp",
-  //       "/projects/z2.webp",
-  //       "/projects/z3.webp",
-  //       "/projects/z4.webp",
-  //       "/projects/z5.webp",
-  //     ],
-  //     features: [
-  //       "React Native + TypeScript + Expo",
-  //       "Realtime location with Maps & GPS",
-  //       "Scheduled rides, fare estimates, chat & call driver",
-  //     ],
-  //     tags: ["Android & iOS", "React Native", "Firebase"],
-  //   },
-  //   {
-  //     title: "Thanthi News 24x7",
-  //     description:
-  //       "Million-download news application with dark mode, social login, dynamic UI, iOS widgets, cricket scoreboard, and config-based UI pattern.",
-  //     images: [
-  //       "/projects/thanthi-news-1.webp",
-  //       "/projects/thanthi-news-2.webp",
-  //       "/projects/thanthi-news-3.webp",
-  //     ],
-  //     features: [
-  //       "Dark mode & dynamic UI",
-  //       "Social login & personalization",
-  //       "iOS widgets & cricket scoreboard",
-  //     ],
-  //     tags: ["News", "Android & iOS", "React Native"],
-  //   },
-  //   {
-  //     title: "Medical Dialogues",
-  //     description:
-  //       "Customized medical content platform for doctors and students with premium accounts, dynamic linking, and specialized medical articles.",
-  //     images: [
-  //       "/projects/medical-dialogues-1.webp",
-  //       "/projects/medical-dialogues-2.webp",
-  //       "/projects/medical-dialogues-3.webp",
-  //     ],
-  //     features: [
-  //       "Premium accounts & role-based content",
-  //       "Dynamic linking into specific articles",
-  //       "Medical news, videos & updates",
-  //     ],
-  //     tags: ["Medical", "React Native", "Deep Linking"],
-  //   },
-  //   {
-  //     title: "Madhyamam",
-  //     description:
-  //       "Multi-language news app with dark mode, profile upload, social login, offline support, push notifications, and dynamic UI rendering.",
-  //     images: [
-  //       "/projects/madhyamam-1.webp",
-  //       "/projects/madhyamam-2.webp",
-  //       "/projects/madhyamam-3.webp",
-  //     ],
-  //     features: [
-  //       "Multi-language news experience",
-  //       "Offline support & push notifications",
-  //       "Profile upload & social login",
-  //     ],
-  //     tags: ["News", "Multi-language", "Offline-first"],
-  //   },
-  //   {
-  //     title: "Thanthi TV",
-  //     description:
-  //       "News and entertainment app with live TV streaming, zodiac content, and all features of the Daily Thanthi News application.",
-  //     images: [
-  //       "/projects/thanthi-tv-1.webp",
-  //       "/projects/thanthi-tv-2.webp",
-  //       "/projects/thanthi-tv-3.webp",
-  //     ],
-  //     features: [
-  //       "Live TV streaming",
-  //       "News + entertainment content",
-  //       "Shared modules with Thanthi News",
-  //     ],
-  //     tags: ["Live TV", "React Native", "Streaming"],
-  //   },
-  //   {
-  //     title: "MediaOne News",
-  //     description:
-  //       "News app delivering timely articles and multimedia with category browsing, search, bookmarks and push notifications.",
-  //     images: [
-  //       "/projects/mediaone-1.webp",
-  //       "/projects/mediaone-2.webp",
-  //       "/projects/mediaone-3.webp",
-  //     ],
-  //     features: [
-  //       "Category-wise news & search",
-  //       "Bookmarks & saved articles",
-  //       "Push notifications & offline reading",
-  //     ],
-  //     tags: ["News", "Android & iOS", "React Native"],
-  //   },
-  //   {
-  //     title: "Maalai Malar – Tamil News",
-  //     description:
-  //       "Regional news application focused on fast content delivery, localization, offline reading, font scaling, dark mode and home-screen widgets.",
-  //     images: [
-  //       "/projects/maalai-malar-1.webp",
-  //       "/projects/maalai-malar-2.webp",
-  //       "/projects/maalai-malar-3.webp",
-  //     ],
-  //     features: [
-  //       "Tamil-first localized news experience",
-  //       "Offline reading & font scaling",
-  //       "Dark mode & iOS home-screen widgets",
-  //     ],
-  //     tags: ["Tamil News", "Localization", "iOS Widgets"],
-  //   },
-  //   {
-  //     title: "Dainik Bhaskar – Hindi News",
-  //     description:
-  //       "Hindi news app emphasizing performance and readability with push notifications, offline caching and seamless navigation.",
-  //     images: [
-  //       "/projects/dainik-bhaskar-1.webp",
-  //       "/projects/dainik-bhaskar-2.webp",
-  //       "/projects/dainik-bhaskar-3.webp",
-  //     ],
-  //     features: [
-  //       "High-performance Hindi news experience",
-  //       "Offline caching & push notifications",
-  //       "Improved list virtualization and image loading",
-  //     ],
-  //     tags: ["Hindi News", "Offline-first", "Performance"],
-  //   },
-  //   {
-  //     title: "Verdictum",
-  //     description:
-  //       "Legal/news coverage app with rich article rendering, filters, and saved-for-later, built for a professional audience.",
-  //     images: [
-  //       "/projects/verdictum-1.webp",
-  //       "/projects/verdictum-2.webp",
-  //       "/projects/verdictum-3.webp",
-  //     ],
-  //     features: [
-  //       "Legal news & article reader",
-  //       "Filters, search & saved articles",
-  //       "Accessibility & dynamic text sizing",
-  //     ],
-  //     tags: ["Law", "News", "React Native"],
-  //   },
-  // ];
 
   const projects = [
     {
@@ -164,8 +14,7 @@ const ProjectsSection = () => {
       title: "ZED - Ride Hailing App",
       description:
         "A Dubai-first ride-hailing app built with React Native. Features realtime driver tracking, scheduled rides, secure payments and a clean App-Store-style UI.",
-      image:
-        "/projects/zed.png",
+      image: "/projects/zed.png",
       features: [
         "React Native + TypeScript + Expo",
         "Realtime location with Maps & GPS",
@@ -184,8 +33,7 @@ const ProjectsSection = () => {
       title: "Thanthi News 24x7",
       description:
         "Million-download news application with dark mode, social login, dynamic UI, iOS widgets, cricket scoreboard, and config-based UI pattern.",
-      image:
-        "/projects/thanthiNews.png",
+      image: "/projects/thanthiNews.png",
       features: [
         "Dark mode & dynamic UI",
         "Social login & personalization",
@@ -208,8 +56,7 @@ const ProjectsSection = () => {
       title: "Medical Dialogues",
       description:
         "Customized medical content platform for doctors and students with premium accounts, dynamic linking, and specialized medical articles.",
-      image:
-        "/projects/medical.png",
+      image: "/projects/medical.png",
       features: [
         "Premium accounts & role-based content",
         "Dynamic linking into specific articles",
@@ -231,8 +78,7 @@ const ProjectsSection = () => {
       title: "Madhyamam",
       description:
         "Multi-language news app with dark mode, profile upload, social login, offline support, push notifications, and dynamic UI rendering.",
-      image:
-        "/projects/md.png",
+      image: "/projects/md.png",
       features: [
         "Multi-language news experience",
         "Offline support & push notifications",
@@ -254,8 +100,7 @@ const ProjectsSection = () => {
       title: "Thanthi TV",
       description:
         "Thanthi TV brings the full Tamil news channel experience to your phone with live TV on the go.Watch the current broadcast or catch up later with on-demand clips and shows.Smart reminders and quick sharing options help you stay updated without missing a story.",
-      image:
-        "/projects/thanthiTv.png",
+      image: "/projects/thanthiTv.png",
       features: [
         "Live TV streaming",
         "News + entertainment content",
@@ -277,8 +122,7 @@ const ProjectsSection = () => {
       title: "MediaOne News",
       description:
         "News app delivering timely articles and multimedia with category browsing, search, bookmarks, and push notifications. Implemented performant list rendering, image caching, and smooth navigation for a polished reading experience across both platforms.",
-      image:
-        "/projects/mediaOne.png",
+      image: "/projects/mediaOne.png",
       features: [
         "Category-wise news & search",
         "Bookmarks & saved articles",
@@ -300,8 +144,7 @@ const ProjectsSection = () => {
       title: "Maalai Malar – Tamil News",
       description:
         "Regional news application focused on fast content delivery and localization. Built offline reading, font scaling, dark mode, and deep linking to ensure accessibility and a consistent experience on Android and iOS. Implemented home‑screen widgets using WidgetKit with a Swift bridge to React Native. Pressreader Integration in native modules for premium content access.",
-      image:
-        "/projects/malaimalar.png",
+      image: "/projects/malaimalar.png",
       features: [
         "Tamil-first localized news experience",
         "Offline reading & font scaling",
@@ -327,8 +170,7 @@ const ProjectsSection = () => {
       title: "Dainik Bhaskar – Hindi News",
       description:
         "Hindi news app emphasizing performance and readability. Delivered push notifications, offline caching, and share flows, while improving list virtualization, image loading, and in‑app navigation stability.",
-      image:
-        "/projects/dainik.png",
+      image: "/projects/dainik.png",
       features: [
         "High-performance Hindi news experience",
         "Offline caching & push notifications",
@@ -346,14 +188,18 @@ const ProjectsSection = () => {
       title: "Verdictum",
       description:
         "Legal/news coverage app with rich article rendering, filters, and saved‑for‑later. Implemented accessibility, dynamic text sizing, and content sharing to support a professional audience on both platforms.",
-      image:
-        "/projects/verdictum.png",
+      image: "/projects/verdictum.png",
       features: [
         "Legal news & article reader",
         "Filters, search & saved articles",
         "Accessibility & dynamic text sizing",
       ],
-      tech: ["React Native", "Offline Support", "Law Content","Push Notifications"],
+      tech: [
+        "React Native",
+        "Offline Support",
+        "Law Content",
+        "Push Notifications",
+      ],
       github: "#",
       playStore:
         "https://play.google.com/store/apps/details?id=com.verdictum.android",
@@ -364,8 +210,7 @@ const ProjectsSection = () => {
       title: "Reporter App",
       description:
         "News reporting application enabling reporters to capture and submit news directly from their phones with camera, video recording, and Google Maps integration.",
-      image:
-        "/projects/reporter.png",
+      image: "/projects/reporter.png",
       tech: [
         "React Native",
         "Camera API",
@@ -426,11 +271,6 @@ const ProjectsSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {/* <ZedRideCard /> */}
-          {/* {projectsData.map((p, i) => (
-        <ProjectCard key={i} {...p} />
-      ))} */}
-
           {projects.map((project) => (
             <motion.div
               key={project.id}
